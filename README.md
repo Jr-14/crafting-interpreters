@@ -1,2 +1,2 @@
-# crafting-interpreters
-Working through the book Crafting Interpreters
+# Crafting Interpreters
+Working through the book (Crafting Interpreters)[https://craftinginterpreters.com/]
