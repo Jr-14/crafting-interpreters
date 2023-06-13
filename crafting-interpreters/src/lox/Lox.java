@@ -1,8 +1,24 @@
 package lox;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class Lox {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-        System.out.println("Hello from Lox");
+    public static void main(String[] args) throws IOException{
+        if (args.length > 1) {
+            System.out.println("Usage: jlox [script]");
+            // Using UNIX "sysexits.h" header
+            // 64 means command was used incorrect and exits
+            System.exit(64); 
+        } else if (args.length == 1) {
+            runFile(args[0]);
+        } else {
+            runPrompt();
+        }
     }
 }
